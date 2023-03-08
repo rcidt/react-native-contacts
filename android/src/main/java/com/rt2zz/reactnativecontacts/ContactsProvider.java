@@ -304,6 +304,13 @@ public class ContactsProvider {
         return contacts;
     }
 
+    /**
+     * cursorMoveToNext
+     * 
+     * Executes Cursor#moveToNext and returns it's value on the given Cursor.
+     * 
+     * If a RuntimeException is thrown by Cursor#moveToNext, it will return false.
+     */
     private Boolean cursorMoveToNext(Cursor cursor) {
         try {
             return cursor.moveToNext();
