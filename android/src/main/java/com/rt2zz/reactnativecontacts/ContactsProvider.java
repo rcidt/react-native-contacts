@@ -315,6 +315,7 @@ public class ContactsProvider {
         try {
             return cursor.moveToNext();
         } catch(RuntimeException error) {
+            Log.e("ContactsProvider", error.toString());
             return false;
         }
     }
